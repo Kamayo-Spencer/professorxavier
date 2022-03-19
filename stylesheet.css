@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.welcome-header{
+    margin-top: 0px;
+    border: 60px;
+    background-color: grey; 
+    height: 50px;
+    text-align: center;
+    padding: 0;
+}
+
+
+
+/* Change color on hover */
+.navbar :hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* Style the top navigation bar */
+
+
+
+.main{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+body{
+	margin: 0 auto;
+	background-image: url("../image/technology.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 720px;
+}
+
+.container-login{
+	width: 500px;
+	height: 450px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: rgba(44, 62, 80,0.7);
+	margin-top: 160px;
+}
+
+.container-login img{
+	width: 150px;
+	height: 150px;
+	margin-top: -60px;
+}
+
+input[type="text"],input[type="password"]{
+	margin-top: 30px;
+	height: 45px;
+	width: 300px;
+	font-size: 18px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	padding-left: 40px;
+}
+
+.form-input::before{
+	content: "\f007";
+	font-family: "FontAwesome";
+	padding-left: 07px;
+	padding-top: 40px;
+	position: absolute;
+	font-size: 35px;
+	color: #2980b9; 
+}
+
+.form-input:nth-child(2)::before{
+	content: "\f023";
+}
+
+.btn-login{
+	padding: 15px 25px;
+	border: none;
+	background-color: #27ae60;
+	color: #fff;
+}
+
+
+.footer{
+    margin-bottom: 10px;
+    border: 50px;
+    background-color: grey;
+    text-align: center;
+    padding: 0px;
+}
+ 
+  /* @media screen and (max-width: 1500px) {.navbar {float: none;width:100%;}} */
