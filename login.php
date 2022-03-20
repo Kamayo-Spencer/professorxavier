@@ -9,7 +9,7 @@ if(isset($_POST["username"])){
 
     $result1=mysqli_query($conn, $sql1);
     if(mysqli_num_rows($result1)==1){
-        echo" YOu have successfully Logged in";
+        echo" You have successfully Logged in";
         header("location:homepageafterlogin.php");
 
     }else{
@@ -35,7 +35,17 @@ if(isset($_POST["username"])){
 	<title>Login Page</title>
 </head>
 <body>
-	<div class="container-login">
+	
+<div class="main">
+    <p class="sign" align="center">Sign in</p>
+    <form class="form1" action="" method="POST">
+      <input class="un " type="text" align="center" name="username" placeholder="Enter your Username" required>
+      <input class="pass" type="password" align="center" name="password" placeholder="Enter your Password" required>
+	  <input type="submit" align="center" name="submit" value="Sign in" class="submit"/>   
+                
+    </div>
+     
+	<!-- <div class="container-login">
         <img src='images/loggged.png'/>
 		<form action="" method="POST">
 			<div class="form_input">
@@ -46,7 +56,7 @@ if(isset($_POST["username"])){
 			</div>
 			<div>
 				<input type="submit" name="submit" value="LOGIN" class="btn-login"/>
-			</div>
+			</div> -->
 		</form>
 	</div>
 </body>

@@ -25,20 +25,19 @@ include_once 'search.php';
             <h1 class="text-center"><i>Welcome to Professor X Heroes Page<i></h1>
         </div>
         <div class="navbar">
-            <a class="navbar-Home" href="index.php" target="_self"><b>Home</b>
+            <a class="navbar-Home" href="homepageafterlogin.php" target="_self"><b>Home</b>
                 <ion-icon name="home-outline" size="large"></ion-icon>
             </a>
-            <a class="navbar-Home" href="logout.php" target="_blank"><b>Logout</b>,
+            <a class="navbar-Home" href="logout.php" target="_blank"><b>Logout</b>
                 <ion-icon name="log-out" size="large"></ion-icon>
             </a>
 
         </div>
     </header>
     <div class="container">
-        <!-- <h1 class="text-center">Welcome to Professor X Heroes Page</h1> -->
-        <!-- <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#completeModal">
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#completeModal" onclick="location.href='adduser.php';">
             Add New Heroes
-        </button> -->
+        </button>
         <form method="POST" action="search.php">
             <input type="text" name="search" placeholder="Search by Name...">
             <button type="submit" class="btn btn-dark" name="submit-search">Search</button>
@@ -52,6 +51,7 @@ include_once 'search.php';
                     <th scope="col">Real Name</th>
                     <th scope="col">Short Bio</th>
                     <th scope="col">Long Bio</th>
+                    <th scope="col">Operations</th>
                 </tr>
             </thead>
             <tbody>
@@ -87,13 +87,10 @@ include_once 'search.php';
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <footer>
         <div class="footer">
-            <!-- <h5>Hosted by Heroku</h5>
-            <h6>
-                <ion-icon name="call-outline"></ion-icon> +254-743106974
-            </h6> -->
+         
             <h6>
                 <a>
-                    <ion-icon name="location-outline"></ion-icon> Somewhere, Kenya
+                    <ion-icon name="location-outline"></ion-icon> Somewhere on Earth!
                 </a>
             </h6>
         </div>
