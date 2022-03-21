@@ -73,9 +73,9 @@ include_once 'search.php';
       <td>' . $short_bio . '</td>
       <td>' . $long_bio . '</td>
       <td>
-      <button class="btn btn-primary"> <a href="update.php? updateheroid='.$hero_id.'" class="text-light"> Update</a>
-      </button>
-      <button class="btn btn-dark"> <a href="delete.php? deleteheroid='.$hero_id.'"  class="text-light"> Delete</a>
+      <button class="btn btn-primary" style="margin: 1.5em;"> <a href="update.php? updateheroid='.$hero_id.'" class="text-light"> Update</a>
+      </button></br>
+      <button class="btn btn-dark" style="margin: 1.5em;"> <a href="delete.php? deleteheroid='.$hero_id.'"  class="text-light"> Delete</a>
       </button>
 
   </td>
