@@ -20,10 +20,10 @@ include_once 'search.php';
 <body>
 
     <header>
-
+<!-- 
         <div class="welcome-header">
             <h1 class="text-center"><i>Welcome to Professor X Heroes Page<i></h1>
-        </div>
+        </div> -->
         <div class="navbar">
             <a class="navbar-Home" href="homepageafterlogin.php" target="_self"><b>Home</b>
                 <ion-icon name="home-outline" size="large"></ion-icon>
@@ -35,7 +35,7 @@ include_once 'search.php';
         </div>
     </header>
     <div class="container">
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#completeModal" onclick="location.href='adduser.php';">
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#completeModal" onclick="location.href='adduser.php';" style="float:right">
             Add New Heroes
         </button>
         <form method="POST" action="search.php">
@@ -72,13 +72,20 @@ include_once 'search.php';
       <td>' . $real_name . '</td>
       <td>' . $short_bio . '</td>
       <td>' . $long_bio . '</td>
+      <td>
+      <button class="btn btn-primary"> <a href="update.php? updateheroid='.$hero_id.'" class="text-light"> Update</a>
+      </button>
+      <button class="btn btn-dark"> <a href="delete.php? deleteheroid='.$hero_id.'"  class="text-light"> Delete</a>
+      </button>
+
+  </td>
 
     </tr>';
                     }
                 }
 
                 ?>
-
+         
             </tbody>
         </table>
 

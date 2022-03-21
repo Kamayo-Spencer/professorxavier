@@ -21,9 +21,9 @@ include_once 'search.php';
 
     <header>
 
-        <div class="welcome-header">
+        <!-- <div class="welcome-header">
             <h1 class="text-center"><i>Welcome to Professor X Heroes Page<i></h1>
-        </div>
+        </div> -->
         <div class="navbar">
             <a class="navbar-Home" href="index.php" target="_self"><b>Home</b>
                 <ion-icon name="home-outline" size="large"></ion-icon>
