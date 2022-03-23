@@ -1,4 +1,5 @@
 <?php
+/**Importing the necessary files */
 include_once 'connection.php';
 include_once 'search.php';
 

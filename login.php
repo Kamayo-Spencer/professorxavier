@@ -1,13 +1,19 @@
 <?php
+// Importing the necessary files
 include_once 'connection.php';
 
+// Finding out if the information gotten from the user is in a set format
 if(isset($_POST["username"])){
+	// Storing the user input in respective variables
     $username=$_POST["username"];
     $password=$_POST["password"];
+	// searching if the password is in the database
     $sql1 = "SELECT * from users WHERE Username='".$username."' AND Userpassword='".$password."'
     limit 1";
 
+	// Returning true if the query finds that the info given by the user is in the database
     $result1=mysqli_query($conn, $sql1);
+	// If the information is in the database, the user is led to an afterlogin page else the user is not authorized to continue to login
     if(mysqli_num_rows($result1)==1){
         echo" You have successfully Logged in";
         header("location:homepageafterlogin.php");

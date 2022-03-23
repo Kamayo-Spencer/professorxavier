@@ -28,11 +28,15 @@ include 'connection.php';
 <div class="container my-3">
 
     <?php
+    // Checking if the user input is a set
     if (isset($_POST["submit-search"])) {
         $search = mysqli_real_escape_string($conn, $_POST['search']);
         $sql = "SELECT * FROM heroes  WHERE Hero_Name LIKE  '%$search%' OR Real_Name LIKE '%$search%'";
         $result = mysqli_query($conn, $sql);
         $queryResult = mysqli_num_rows($result);
+        //Finding out if the searched item is available in the database
+        // and displaying it to the user if it is available otherwise
+        // a not found message is desplayed.
         if ($queryResult == 0) {
             echo "There was no search results";
            

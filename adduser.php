@@ -1,13 +1,17 @@
 <?php
-include_once 'connection.php';
+include_once 'connection.php'; // importing the connection.php file for further use
+# Checking if the content submitted in the form is a set
 if (isset($_POST['submit'])) {
 
+    // Storing the content that was submitted by the user in specific variables
     $heroname = $_POST['heroname'];
     $realname = $_POST['realname'];
     $shortbio = $_POST['shortbio'];
     $longbio = $_POST['longbio'];
+    // Adding the content collected  from the user to the database
     $sql2 = "INSERT INTO heroes (Hero_Name, Real_Name,Short_Bio, Long_Bio) VALUES ('$heroname', '$realname', '$shortbio', '$longbio')";
-    $result2=mysqli_query($conn, $sql2);
+    $result2=mysqli_query($conn, $sql2); # Checking whether the contents have been added to the table and saving the output in a variable
+    // Printing a statement on the homepage if content has been added to the database otherwise we raise an error
     if ($result2) {
         echo "Data added successfully.";
         header("location:homepageafterlogin.php");
